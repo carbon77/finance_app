@@ -14,4 +14,8 @@ public class UserService extends BasicService<User, Long> {
         super(userRepository);
         this.userRepository = userRepository;
     }
+
+    public User findUserByNameAndPassword(String name, String password) {
+        return this.userRepository.findByNameAndPassword(name, password);
+    }
 }
