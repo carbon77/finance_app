@@ -4,7 +4,7 @@ import MainPage from "./pages/MainPage";
 import Category from "./pages/Category";
 import Account from "./pages/Account";
 import MySideMenu from "./components/MySideMenu";
-import React from 'react'
+import AddTransaction from "./pages/AddTransaction";
 
 function App() {
     return (
@@ -15,6 +15,7 @@ function App() {
                     <Route path='/' element={<MainPage/>}/>
                     <Route path='/category' element={<Category/>}/>
                     <Route path='/account' element={<Account/>}/>
+                    <Route path='/add_transaction' element={<AddTransaction/>}/>
                 </Routes>
             </BrowserRouter>
         </div>

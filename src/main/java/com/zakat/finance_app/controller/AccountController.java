@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("accounts")
+@CrossOrigin
 public class AccountController extends BasicController<Account, Long> {
     private final AccountService accountService;
     private final UserService userService;

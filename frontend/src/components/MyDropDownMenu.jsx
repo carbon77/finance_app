@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 
 function MyDropDownMenu({items}) {
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [curItem, setCurItem] = useState([items[0]])
 
     const toggle = () => setDropdownOpen((prevState) => !prevState);
 
@@ -18,7 +19,7 @@ function MyDropDownMenu({items}) {
                 <DropdownToggle caret>Счёт</DropdownToggle>
                 <DropdownMenu style={{minWidth: "unset"}}>
                     {items.map(item => (
-                        <DropdownItem key={item.id}>{item.name}</DropdownItem>
+                        <DropdownItem key={item.id} >{item.name}</DropdownItem>
                     ))}
                 </DropdownMenu>
             </Dropdown>
